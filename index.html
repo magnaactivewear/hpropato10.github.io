@@ -1,17 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
 <meta charset="UTF-8">
-<title>PRUEBA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MAGNA Activewear</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:white;
+}
+
+.topbar{
+background:#eaa1c4;
+color:white;
+padding:10px;
+text-align:center;
+font-size:14px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+.logo img{
+height:70px;
+}
+
+.icons{
+font-size:28px;
+cursor:pointer;
+}
+
+.hero{
+text-align:center;
+padding:30px 15px;
+}
+
+.hero img{
+width:100%;
+max-width:800px;
+border-radius:10px;
+}
+
+.products{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+padding:20px;
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.product h3{
+text-align:center;
+margin-top:10px;
+}
+
+.product p{
+text-align:center;
+margin-top:5px;
+}
+
+.product button{
+display:block;
+margin:10px auto;
+background:#eaa1c4;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:20px;
+cursor:pointer;
+}
+
+@media(min-width:900px){
+
+.products{
+grid-template-columns:repeat(4,1fr);
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>MAGNA TEST</h1>
+<div class="topbar">
+🚚 Envíos gratis en el día (MDP) | 📍 Pick Up zona centro
+</div>
 
-<button onclick="alert('Funciona')">
-Probar
-</button>
+<header>
+
+<div class="logo">
+<img src="logo.jpeg">
+</div>
+
+<div class="icons">
+🛍️
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>¡Bienvenida a MAGNA!</h1>
+
+<img src="banner.jpeg">
+
+</section>
+
+<section class="products">
+
+<div class="product">
+<img src="producto1.jpeg">
+<h3>Top Emilia Negro</h3>
+<p>$30.000</p>
+<button>Agregar al carrito</button>
+</div>
+
+<div class="product">
+<img src="producto2.jpeg">
+<h3>Top Emilia Negro</h3>
+<p>$30.000</p>
+<button>Agregar al carrito</button>
+</div>
+
+<div class="product">
+<img src="producto3.jpeg">
+<h3>Conjunto Emilia Negro</h3>
+<p>$59.900</p>
+<button>Agregar al carrito</button>
+</div>
+
+<div class="product">
+<img src="producto4.jpeg">
+<h3>Calza Emilia</h3>
+<p>$35.000</p>
+<button>Agregar al carrito</button>
+</div>
+
+<div class="product">
+<img src="producto5.jpeg">
+<h3>Top Renata Rosa</h3>
+<p>$30.000</p>
+<button>Agregar al carrito</button>
+</div>
+
+<div class="product">
+<img src="producto6.jpeg">
+<h3>Top Emilia Chocolate</h3>
+<p>$30.000</p>
+<button>Agregar al carrito</button>
+</div>
+
+</section>
 
 </body>
 </html>
-
