@@ -173,11 +173,109 @@
   <div id="toast">
   </div>
   <script>
-   let cart=[];function showToast(t){let x=document.getElementById('toast');x.innerText=t;x.style.opacity='1';setTimeout(()=>x.style.opacity='0',2000)}function addItem(i){cart.push(i);document.getElementById('cartCount').innerText=cart.length;showToast(i+' agregado al carrito')}function showCart(){if(cart.length===0){alert('Tu carrito está vacío');return;}let r='';cart.forEach((i,n)=>r+=(n+1)+') '+i+'
-');alert('TU CARRITO
+   <script>
 
-'+r+'
-Presioná el botón verde de WhatsApp para enviar el pedido.')}function sendWhatsapp(){if(cart.length===0){alert('Agregá productos primero');return;}let t='Hola Magna Activewear!%0A%0AQuiero realizar el siguiente pedido:%0A%0A';cart.forEach((i,n)=>t+=(n+1)+') '+i+'%0A');t+='%0AEspero tu respuesta para coordinar el pago y envío.%0A%0AMuchas gracias.';window.open('https://wa.me/542235821368?text='+t,'_blank')}function openMenu(){menu.classList.add('open');overlay.classList.add('show')}function closeMenu(){menu.classList.remove('open');overlay.classList.remove('show')}const banners=['banner.jpeg','producto1.jpeg','producto3.jpeg','producto5.jpeg'];let a=0;setInterval(()=>{a=(a+1)%banners.length;let b=document.getElementById('bannerRotativo');b.style.opacity='0';setTimeout(()=>{b.src=banners[a];b.style.opacity='1'},300)},2000);
-  </script>
+let cart = \[\];
+
+function showToast(t) {
+
+let x = document.getElementById('toast');
+
+x.innerText = t;
+
+x.style.opacity = '1';
+
+setTimeout(() => x.style.opacity = '0', 2000);
+
+}
+
+function addItem(i) {
+
+cart.push(i);
+
+document.getElementById('cartCount').innerText = cart.length;
+
+showToast(i + ' agregado al carrito');
+
+}
+
+function showCart() {
+
+if (cart.length === 0) {
+
+alert('Tu carrito está vacío');
+
+return;
+
+}
+
+let r = '';
+
+cart.forEach((i, n) => r += (n + 1) + ') ' + i + ' ');
+
+alert('TU CARRITO ' + r + ' Presioná el botón verde de WhatsApp para enviar el pedido.');
+
+}
+
+function sendWhatsapp() {
+
+if (cart.length === 0) {
+
+alert('Agregá productos primero');
+
+return;
+
+}
+
+let t = 'Hola Magna Activewear!%0A%0AQuiero realizar el siguiente pedido:%0A%0A';
+
+cart.forEach((i, n) => t += (n + 1) + ') ' + i + '%0A');
+
+t += '%0AEspero tu respuesta para coordinar el pago y envío.%0A%0AMuchas gracias.';
+
+window.open('https://wa.me/542235821368?text=' + t, '\_blank');
+
+}
+
+function openMenu() {
+
+menu.classList.add('open');
+
+overlay.classList.add('show');
+
+}
+
+function closeMenu() {
+
+menu.classList.remove('open');
+
+overlay.classList.remove('show');
+
+}
+
+const banners = \['banner.jpeg', 'producto1.jpeg', 'producto3.jpeg', 'producto5.jpeg'\];
+
+let a = 0;
+
+setInterval(() => {
+
+a = (a + 1) % banners.length;
+
+let b = document.getElementById('bannerRotativo');
+
+b.style.opacity = '0';
+
+setTimeout(() => {
+
+b.src = banners\[a\];
+
+b.style.opacity = '1';
+
+}, 300);
+
+}, 2000);
+
+</script>
+
  </body>
 </html>
