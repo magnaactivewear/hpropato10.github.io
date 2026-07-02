@@ -1,53 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MAGNA Activewear</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#fff;color:#222}.topbar{background:#eaa1c4;color:#fff;padding:10px;text-align:center}
-header{display:flex;justify-content:space-between;align-items:center;padding:15px;border-bottom:1px solid #eee}
-.logo img{height:60px}.icons{display:flex;gap:15px;font-size:24px;cursor:pointer}.cart-icon{position:relative}
-#cartCount{position:absolute;top:-8px;right:-10px;background:#eaa1c4;color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px}
-.hero{text-align:center;padding:20px}.hero img{width:100%;max-width:700px;border-radius:10px;transition:opacity .5s}
-.search{max-width:500px;margin:20px auto;padding:0 15px}.search input{width:100%;padding:14px;border:1px solid #ddd;border-radius:30px}
-.products{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:20px}.product img{width:100%;height:280px;object-fit:cover}
-.product h3,.product p{text-align:center;padding-top:8px}.cart-btn{background:#eaa1c4;color:#fff;border:none;padding:12px;border-radius:20px;display:block;margin:10px auto;cursor:pointer}
-.pink{background:#eaa1c4;color:#fff;text-align:center;padding:50px 20px}.footer{text-align:center;padding:30px}
-.whatsapp{position:fixed;right:20px;bottom:20px;background:#25d366;color:#fff;width:65px;height:65px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none}
-#toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:10px 20px;border-radius:20px;opacity:0;transition:.3s}
-@media(min-width:900px){.products{grid-template-columns:repeat(4,1fr)}}
-</style></head><body>
-<div class="topbar">🚚 Envíos gratis en el día (MDP) | 📍 Pick Up zona centro</div>
-<header><div class="logo"><img src="logo.jpeg"></div><div class="icons"><span>☰</span><span class="cart-icon" onclick="showCart()">🛍️<span id="cartCount">0</span></span></div></header>
-<section class="hero"><h1>¡Bienvenida a MAGNA!</h1><img id="bannerRotativo" src="banner.jpeg"></section>
-<div class="search"><input placeholder="🔍 Buscar producto..."></div>
-<section class="products">
-<div class="product"><img src="producto1.jpeg"><h3>Top Emilia Negro</h3><p>$30.000</p><button class="cart-btn" onclick="addItem('Top Emilia Negro')">Agregar al carrito</button></div>
-<div class="product"><img src="producto2.jpeg"><h3>Top Emilia Negro</h3><p>$30.000</p><button class="cart-btn" onclick="addItem('Top Emilia Negro')">Agregar al carrito</button></div>
-<div class="product"><img src="producto3.jpeg"><h3>Conjunto Emilia Negro</h3><p>$59.900</p><button class="cart-btn" onclick="addItem('Conjunto Emilia Negro')">Agregar al carrito</button></div>
-<div class="product"><img src="producto4.jpeg"><h3>Calza Emilia</h3><p>$35.000</p><button class="cart-btn" onclick="addItem('Calza Emilia')">Agregar al carrito</button></div>
-<div class="product"><img src="producto5.jpeg"><h3>Top Renata Rosa</h3><p>$30.000</p><button class="cart-btn" onclick="addItem('Top Renata Rosa')">Agregar al carrito</button></div>
-<div class="product"><img src="producto6.jpeg"><h3>Top Emilia Chocolate</h3><p>$30.000</p><button class="cart-btn" onclick="addItem('Top Emilia Chocolate')">Agregar al carrito</button></div>
-</section>
-<section class="pink"><h2>Hecho para tu mejor versión</h2></section>
-<footer class="footer"><p>@magna_activewear</p><p>+54 9 223 5821368</p></footer>
-<a class="whatsapp" href="#" onclick="sendWhatsapp()">💬</a><div id="toast"></div>
-<script>
-let cart=[];
-function showToast(t){const x=document.getElementById('toast');x.innerText=t;x.style.opacity='1';setTimeout(()=>x.style.opacity='0',2000)}
-function addItem(i){cart.push(i);document.getElementById('cartCount').innerText=cart.length;showToast(i+' agregado al carrito');}
-function showCart(){alert(cart.length?cart.join('
-'):'Carrito vacío');}
-function sendWhatsapp(){if(!cart.length){alert('Agregá productos primero');return;}let t='Hola Magna Activewear!
+<title>PRUEBA</title>
+</head>
+<body>
 
-Quiero realizar el siguiente pedido:
+<h1>MAGNA TEST</h1>
 
-';cart.forEach((i,n)=>t+=(n+1)+') '+i+'
-');t+='
-Espero tu respuesta para coordinar el pago y envío.
+<button onclick="alert('Funciona')">
+Probar
+</button>
 
-Muchas gracias.';window.open('https://wa.me/542235821368?text='+encodeURIComponent(t),'_blank');}
-const banners=['banner.jpeg','producto1.jpeg','producto3.jpeg','producto5.jpeg'];let i=0;setInterval(()=>{const b=document.getElementById('bannerRotativo');b.style.opacity='0';setTimeout(()=>{i=(i+1)%banners.length;b.src=banners[i];b.style.opacity='1';},300);},2000);
-</script></body></html>
+</body>
+</html>
