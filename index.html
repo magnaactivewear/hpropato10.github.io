@@ -354,14 +354,13 @@ grouped[item] =
 
 });
   
-cart.forEach((item,index)=>{
+Object.entries(grouped).forEach(([item,cantidad])=>{
 
 items.innerHTML +=
 "<div class='cart-row'>" +
-(index+1) +
-") " +
 item +
-" <button onclick='removeItem(" + index + ")'>❌</button>" +
+" x" +
+cantidad +
 "</div>";
 
 });
