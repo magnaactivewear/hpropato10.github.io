@@ -319,7 +319,7 @@ Catsuits
 
 <span onclick="openMenu()">☰</span>
 
-<span style="margin-left:15px;">🔍</span>
+<span onclick="toggleSearch()" style="margin-left:15px;">🔍</span>
 
 <span onclick="showCart()" style="margin-left:15px;">
 🛍️
@@ -638,6 +638,27 @@ function closeProducts(){
 document
 .getElementById("productsMenu")
 .classList.remove("show");
+
+}
+
+function toggleSearch(){
+
+const barra =
+document.getElementById("searchBar");
+
+if(barra.style.display === "none"){
+
+barra.style.display = "block";
+
+document
+.getElementById("searchInput")
+.focus();
+
+}else{
+
+barra.style.display = "none";
+
+}
 
 }
 
