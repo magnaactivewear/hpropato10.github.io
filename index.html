@@ -150,6 +150,30 @@ grid-template-columns:repeat(4,1fr);
 
 }
 
+#toast{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#222;
+color:white;
+padding:12px 20px;
+border-radius:25px;
+opacity:0;
+transition:.3s;
+z-index:99999;
+}
+
+.cart-count{
+background:#eaa1c4;
+color:white;
+font-size:12px;
+padding:3px 8px;
+border-radius:20px;
+margin-left:5px;
+vertical-align:top;
+}
+  
 </style>
 </head>
 
@@ -166,7 +190,10 @@ grid-template-columns:repeat(4,1fr);
 </div>
 
 <div class="icons">
-<span onclick="showCart()">🛍️</span>
+<span onclick="showCart()">
+🛍️
+<span id="cartCount" class="cart-count">0</span>
+</span>
 </div>
 
 </header>
@@ -175,7 +202,7 @@ grid-template-columns:repeat(4,1fr);
 
 <h1>¡Bienvenida a MAGNA!</h1>
 
-<img src="banner.jpeg">
+<img id="bannerRotativo" src="banner.jpeg">
 
 </section>
 
