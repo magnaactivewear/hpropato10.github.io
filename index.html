@@ -362,6 +362,7 @@ alert("Agregá productos primero");
 return;
 
 }
+  
 
 let mensaje =
 "Hola Magna Activewear!\n\n";
@@ -389,6 +390,45 @@ encodeURIComponent(mensaje),
 );
 
 }
+  
+const banners = [
+"banner.jpeg",
+"producto1.jpeg",
+"producto3.jpeg",
+"producto5.jpeg"
+];
+
+let bannerActual = 0;
+
+setInterval(()=>{
+
+const banner =
+document.getElementById(
+"bannerRotativo"
+);
+
+if(!banner) return;
+
+banner.style.opacity = "0";
+
+setTimeout(()=>{
+
+bannerActual++;
+
+if(bannerActual >= banners.length){
+
+bannerActual = 0;
+
+}
+
+banner.src =
+banners[bannerActual];
+
+banner.style.opacity = "1";
+
+},300);
+
+},2000);
 
 </script>
   
