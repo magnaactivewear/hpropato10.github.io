@@ -598,6 +598,55 @@ const banners = [
 
 let bannerActual = 0;
 
+function updateBanner(){
+
+const banner =
+document.getElementById(
+"bannerRotativo"
+);
+
+banner.style.opacity = "0";
+
+setTimeout(()=>{
+
+banner.src =
+banners[bannerActual];
+
+banner.style.opacity = "1";
+
+},300);
+
+}
+
+function nextBanner(){
+
+bannerActual++;
+
+if(bannerActual >= banners.length){
+
+bannerActual = 0;
+
+}
+
+updateBanner();
+
+}
+
+function prevBanner(){
+
+bannerActual--;
+
+if(bannerActual < 0){
+
+bannerActual =
+banners.length - 1;
+
+}
+
+updateBanner();
+
+}
+
 setInterval(()=>{
 
 const banner =
