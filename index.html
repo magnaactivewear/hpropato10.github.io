@@ -635,6 +635,11 @@ document.getElementById(
 "bannerRotativo"
 );
 
+const dots =
+document.querySelectorAll(
+".dot"
+);
+
 banner.style.opacity = "0";
 
 setTimeout(()=>{
@@ -643,6 +648,23 @@ banner.src =
 banners[bannerActual];
 
 banner.style.opacity = "1";
+
+dots.forEach(dot=>{
+
+dot.classList.remove(
+"active"
+);
+
+});
+
+if(dots[bannerActual]){
+
+dots[bannerActual]
+.classList.add(
+"active"
+);
+
+}
 
 },300);
 
