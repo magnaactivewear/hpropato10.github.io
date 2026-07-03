@@ -591,6 +591,46 @@ banner.style.opacity = "1";
 
 },2000);
 
+function openMenu(){
+
+document
+.getElementById("menuPanel")
+.classList.add("open");
+
+document
+.getElementById("overlay")
+.classList.add("show");
+
+}
+
+function closeMenu(){
+
+document
+.getElementById("menuPanel")
+.classList.remove("open");
+
+document
+.getElementById("overlay")
+.classList.remove("show");
+
+}
+
+function openProducts(){
+
+document
+.getElementById("productsMenu")
+.classList.add("show");
+
+}
+
+function closeProducts(){
+
+document
+.getElementById("productsMenu")
+.classList.remove("show");
+
+}
+
 </script>
   
 <div id="toast"></div>
