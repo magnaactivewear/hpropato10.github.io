@@ -312,9 +312,16 @@ showToast(
 
 }
 
-function removeItem(index){
+function removeItem(producto){
 
-cart.splice(index,1);
+const posicion =
+cart.indexOf(producto);
+
+if(posicion !== -1){
+
+cart.splice(posicion,1);
+
+}
 
 document
 .getElementById("cartCount")
