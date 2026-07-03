@@ -312,6 +312,18 @@ showToast(
 
 }
 
+function removeItem(index){
+
+cart.splice(index,1);
+
+document
+.getElementById("cartCount")
+.innerText = cart.length;
+
+showCart();
+
+}
+
 function showCart(){
 
 const panel =
