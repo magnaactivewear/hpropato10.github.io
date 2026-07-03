@@ -345,6 +345,15 @@ return;
 
 items.innerHTML = "";
 
+const grouped = {};
+
+cart.forEach(item=>{
+
+grouped[item] =
+(grouped[item] || 0) + 1;
+
+});
+
 cart.forEach((item,index)=>{
 
 items.innerHTML +=
