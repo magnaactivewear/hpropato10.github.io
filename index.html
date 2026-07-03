@@ -280,11 +280,34 @@ Enviar pedido por WhatsApp
 
 let cart = [];
 
+function showToast(text){
+
+const toast =
+document.getElementById("toast");
+
+toast.innerHTML = text;
+
+toast.style.opacity = "1";
+
+setTimeout(()=>{
+
+toast.style.opacity = "0";
+
+},2000);
+
+}
+
 function addItem(item){
 
 cart.push(item);
 
-alert(item + " agregado al carrito");
+document
+.getElementById("cartCount")
+.innerText = cart.length;
+
+showToast(
+"✅ " + item + " agregado al carrito"
+);
 
 }
 
