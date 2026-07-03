@@ -697,6 +697,43 @@ product.style.display =
 
 }
 
+
+function filterCategory(category){
+
+const products =
+document.querySelectorAll(
+".searchable-product"
+);
+
+products.forEach(product=>{
+
+if(category === "all"){
+
+product.style.display =
+"block";
+
+return;
+
+}
+
+if(product.classList.contains(category)){
+
+product.style.display =
+"block";
+
+}else{
+
+product.style.display =
+"none";
+
+}
+
+});
+
+closeMenu();
+
+}
+
 </script>
   
 <div id="toast"></div>
