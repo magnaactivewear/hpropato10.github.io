@@ -463,7 +463,19 @@ style="width:100%;padding:12px;border:1px solid #ddd;border-radius:30px;">
 <img src="producto1.jpeg">
 <h3>Top Emilia Negro</h3>
 <p>$30.000</p>
-<button onclick="addItem('Top Emilia Negro')">Agregar al carrito</button>
+
+<select id="talle-top1">
+<option>XS</option>
+<option>S</option>
+<option selected>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<button onclick="addItem('Top Emilia Negro','talle-top1')">
+Agregar al carrito
+</button>
+
 </div>
 
 <div class="product searchable-product top">
@@ -550,7 +562,14 @@ toast.style.opacity = "0";
 
 function addItem(item){
 
-cart.push(item);
+const talle =
+document.getElementById(
+talleId
+).value;
+
+cart.push(
+item + " - Talle " + talle
+);
 
 document
 .getElementById("cartCount")
