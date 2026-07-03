@@ -369,9 +369,7 @@ Contacto
 ← Volver
 </div>
 
-<div class="submenu-item" onclick="filterCategory('all')">
-Ver todos los productos
-</div>
+<div class="submenu-item" onclick
 
 <div class="submenu-item" onclick="filterCategory('top')">
 Tops
@@ -459,6 +457,8 @@ style="width:100%;padding:12px;border:1px solid #ddd;border-radius:30px;">
 
 <section class="products">
 
+<section id="productsSection" class="products">
+
 <div class="product searchable-product top">
 <img src="producto1.jpeg">
 <h3>Top Emilia Negro</h3>
@@ -512,6 +512,10 @@ Agregar al carrito
 <p>$30.000</p>
 <button onclick="addItem('Top Emilia Chocolate')">Agregar al carrito</button>
 </div>
+
+<h2 id="productsTitle" style="display:none;width:100%;text-align:center;">
+Productos
+</h2>
 
 </section>
 
@@ -929,6 +933,26 @@ product.style.display =
 });
 
 closeMenu();
+
+}
+
+function showProducts(category){
+
+document
+.getElementById("productsSection")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+filterCategory(category);
+
+const title =
+document.getElementById(
+"productsTitle"
+);
+
+title.style.display =
+"block";
 
 }
 
